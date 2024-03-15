@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+
+kind: Certificate
+metadata:
+  name: lamscaping-site-tls
+spec:
+  secretName: lamscaping.site
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: lamscaping.site
+  dnsNames:
+    - lamscaping.site
+    - www.lamscaping.site
