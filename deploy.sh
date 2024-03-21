@@ -1,5 +1,5 @@
 docker build -t mallama/multi-client:latest -t mallama/multi-client:$SHA -f  ./client/Dockerfile ./client
-docker build -t mallama/multi server:latest -t mallama/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t mallama/multi-server:latest -t mallama/multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t mallama/multi-worker:latest -t mallama/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push mallama/multi-client:latest
